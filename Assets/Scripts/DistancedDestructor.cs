@@ -1,23 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DistancedDestructor : MonoBehaviour
 {
 
-    private GameObject _player;
+    private GameObject player;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        _player = GameObject.Find("Player");
+        player = GameObject.Find("Player");
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if(!_player)
+        if(!player)
         {
-            _player = GameObject.Find("Player");
+            player = GameObject.Find("Player");
             return;
         }
-        if(_player.transform.position.x - transform.position.x > 15f)
+        if(player.transform.position.x - transform.position.x > 15f)
         {
             Destroy(gameObject);
         }

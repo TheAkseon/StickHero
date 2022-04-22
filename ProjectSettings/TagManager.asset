@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Diamond
   - Platform
-  - Coin
   layers:
   - Default
   - TransparentFX
